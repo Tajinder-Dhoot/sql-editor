@@ -36,7 +36,7 @@ const OutputDisplay = ({ submittedQuery, loading, setLoading }) => {
       setResults([]);
       return;
     }
-    const queryIndex = queryMap.findIndex((o) => o.query === submittedQuery);
+    const queryIndex = queryMap.findIndex((o) => o.query.toLowerCase() === submittedQuery.toLowerCase());
     if (queryIndex === -1) {
       setResults([]);
     } else {
